@@ -23,3 +23,22 @@ Rules:
 - No recursion allowed.
 - Output must match exactly.
 */
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    do {
+        printf("Enter a positive integer: ");
+        scanf("%d", &n);
+    } while (n < 1);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 0; j < i; j++) {
+            printf("#");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
